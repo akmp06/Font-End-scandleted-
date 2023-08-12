@@ -1,0 +1,462 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css2?family=La+Belle+Aurore&family=Zilla+Slab:wght@300;400;500;600;700&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/*
+font-family: 'La Belle Aurore', cursive;
+font-family: 'Zilla Slab', serif;
+*/
+.header-top {
+  background-color: #000;
+}
+.header-top__text {
+  font-family: "Zilla Slab", serif;
+  font-size: 14px;
+  text-align: center;
+  color: #fff;
+  padding: 15px 0;
+}
+
+.top-menu {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+.top-menu > * {
+  flex: 1;
+}
+.top-menu__nav .menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+.top-menu__nav .menu__item {
+  padding-right: 18px;
+}
+.top-menu__nav .menu__item .menu__link {
+  color: #0C0D12;
+  font-family: "Zilla Slab", serif;
+  font-size: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.top-menu__nav .menu__item .menu__link:hover {
+  text-decoration: underline;
+}
+.top-menu__logo {
+  text-align: center;
+}
+.top-menu__icons .icon-menu {
+  display: flex;
+}
+.top-menu__icons .icon-menu__item:not(.icon-menu__item:last-of-type) {
+  padding: 0 18px;
+}
+.top-menu__icons .icon-menu__link {
+  color: #0C0D12;
+}
+.top-menu__icons a.icon-menu__link.icon-menu__link--login {
+  border: 1px solid #0C0D12;
+  padding: 8px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-family: "Zilla Slab", serif;
+  font-size: 14;
+  text-transform: uppercase;
+  transition: all 0.3s;
+}
+.top-menu__icons a.icon-menu__link.icon-menu__link--login:hover {
+  background-color: #0C0D12;
+  color: #fff;
+}
+
+.hero__img {
+  text-align: center;
+  background-color: #FBEDD3;
+}
+.hero__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero__text {
+  background-color: #F9F5EA;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.hero__text__para {
+  color: #555659;
+  font-family: "Zilla Slab", serif;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+.hero__text__title {
+  font-size: 60px;
+  font-family: "Zilla Slab", serif;
+  color: #0C0D12;
+  font-weight: 500;
+  line-height: 1.2em;
+  margin-top: 25px;
+  margin-bottom: 50px;
+}
+.hero__text__title .coloring-span {
+  color: #C9A489;
+}
+.hero__text__title .handwriting {
+  color: #C9A489;
+  font-family: "La Belle Aurore", cursive;
+}
+.hero__text__link {
+  background-color: #000;
+  color: #fff;
+  font-size: 20px;
+  font-family: "Zilla Slab", serif;
+  text-transform: uppercase;
+  padding: 20px 30px;
+  text-decoration: none;
+  border-radius: 40px;
+  transition: all 0.3s;
+  border: 1px solid black;
+}
+.hero__text__link:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.trending-area {
+  background-color: #FBF8F0;
+}
+.trending-area .trending-text {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Zilla Slab", serif;
+  font-size: 18px;
+  padding-top: 70px;
+  margin-bottom: 20px;
+  color: #555659;
+}
+.trending-area .trending-title {
+  font-family: "Zilla Slab", serif;
+  font-weight: 500;
+  color: #0C0D12;
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.trending-area .single-product__img {
+  margin-bottom: 20px;
+}
+.trending-area .single-product__img img {
+  width: 100%;
+}
+.trending-area .single-product__info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+.trending-area .single-product__info h3 {
+  font-family: "Zilla Slab", serif;
+  color: #0C0D12;
+  font-weight: 500;
+  font-size: 20px;
+}
+.trending-area .single-product__info p {
+  color: #0C0D12;
+  font-family: "Zilla Slab", serif;
+  font-size: 20px;
+}
+.trending-area .single-product__info p span.strikethrough {
+  font-size: 16px;
+  color: #9E9EA0;
+  text-decoration: line-through;
+}
+.trending-area small {
+  color: #0C0D12;
+  font-family: "Zilla Slab", serif;
+  font-size: 16px;
+}
+.trending-area .single-product__btn {
+  display: block;
+  border: 1px solid #C9A489;
+  padding: 10px 0;
+  border-radius: 25px;
+  text-align: center;
+  color: #0C0D12;
+  text-decoration: none;
+  font-family: "Zilla Slab";
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 20px;
+  margin-top: 15px;
+  transition: all 0.3s;
+}
+.trending-area .single-product__btn:hover {
+  background-color: #C9A489;
+  color: #fff;
+}
+.trending-area span.plus-icon {
+  background: black;
+  color: #fff;
+  border-radius: 50%;
+  padding: 5px;
+  font-size: 11px;
+  position: relative;
+  left: 5px;
+  top: -3px;
+}
+.trending-area .offer {
+  margin-top: 50px;
+  background-image: url(./img/offer-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 70px;
+  margin-bottom: 50px;
+}
+.trending-area .offer__title {
+  font-family: "Zilla Slab", serif;
+  font-size: 80px;
+  font-weight: 500;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+.trending-area .offer__title span {
+  background-color: black;
+  color: #fff;
+  font-size: 80px;
+  font-family: "Zilla Slab", serif;
+  font-weight: 500;
+}
+.trending-area .offer__text {
+  font-family: "Zilla Slab", serif;
+  font-size: 32px;
+  color: #fff;
+  line-height: 45px;
+}
+.trending-area .offer-btn {
+  display: inline-block;
+  width: 165px;
+  border: 1px solid #C9A489;
+  padding: 14px 0;
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 20px;
+  font-family: "Zilla Slab", serif;
+  color: #0C0D12;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+  transition: all 0.3s;
+}
+.trending-area .offer-btn:hover {
+  background-color: #C9A489;
+  color: #fff;
+}
+
+.features-area {
+  background-color: #ECDFDB;
+}
+.features-area img {
+  max-width: 100%;
+}
+.features-area .feature-img {
+  max-width: 100%;
+  padding-top: 70px;
+}
+.features-area .features .features-text {
+  color: #0C0D12;
+  font-family: "Zilla Slab", serif;
+  font-size: 32px;
+  line-height: 40px;
+  margin-top: 40px;
+  margin-bottom: 60px;
+}
+.features-area .single-feature-title {
+  font-family: "Zilla Slab", serif;
+  font-size: 40px;
+  font-weight: 700;
+  color: #0C0D12;
+  margin: 30px 0;
+}
+.features-area .single-feature-text {
+  font-family: "Zilla Slab", serif;
+  color: #0C0D12;
+  font-size: 32px;
+  line-height: 40px;
+}
+.features-area .second-row-feature {
+  margin-bottom: 50px;
+}
+
+.product-area {
+  background: rgb(206, 173, 149);
+  background: linear-gradient(180deg, rgb(206, 173, 149) 0%, rgb(170, 155, 147) 100%);
+  height: 90vh;
+}
+.product-area .product {
+  width: 100%;
+  height: 100%;
+  background-image: url(./img/product-bg.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.product-area .product__title {
+  font-family: "Zilla Slab", serif;
+  font-size: 130px;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  padding-top: 260px;
+}
+.product-area .product__btn {
+  text-decoration: none;
+  font-family: "Zilla Slab", serif;
+  font-size: 20px;
+  color: #fff;
+  background-color: #000;
+  display: block;
+  width: 270px;
+  padding: 20px 0;
+  text-align: center;
+  border-radius: 30px;
+  margin: 0 auto;
+  text-transform: uppercase;
+  margin-top: 520px;
+  border: 1px solid #000;
+  transition: all 0.3s;
+}
+.product-area .product__btn:hover {
+  background-color: #fff;
+  border: 1px solid #fff;
+  color: #000;
+}
+
+.footer-area {
+  background-color: #000;
+  height: 400px;
+  color: #fff;
+}
+.footer-area .footer .footer-top {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.footer-area .footer .footer-top .footer-logo {
+  max-width: 100%;
+}
+.footer-area .footer .footer-top .footer-menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.footer-area .footer .footer-top .footer-menu__item {
+  margin-bottom: 20px;
+}
+.footer-area .footer .footer-top .footer-menu__link {
+  font-family: "Zilla Slab", serif;
+  font-size: 18px;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.footer-area .footer .footer-top .footer-menu__link:hover {
+  text-decoration: underline;
+}
+.footer-area .footer .footer-top .footer-top-title {
+  font-family: "Zilla Slab", serif;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 40px;
+}
+.footer-area .footer .footer-top .footer-top-link {
+  border: 1px solid #fff;
+  color: #fff;
+  font-family: "Zilla Slab", serif;
+  font-size: 14px;
+  text-decoration: none;
+  padding: 12px 35px;
+  border-radius: 30px;
+  display: inline-block;
+  margin-top: 20px;
+  transition: all 0.3s;
+}
+.footer-area .footer .footer-top .footer-top-link:hover {
+  background-color: #fff;
+  color: #000;
+}
+.footer-area .footer .footer-bottom-area {
+  border-top: 1px solid #555659;
+}
+.footer-area .footer .footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+.footer-area .footer .footer-bottom .footer-bottom-p, .footer-area .footer .footer-bottom .footer-bottom-credit {
+  color: #555659;
+  font-family: "Zilla Slab", serif;
+  font-size: 14px;
+}/*# sourceMappingURL=style.css.map */
